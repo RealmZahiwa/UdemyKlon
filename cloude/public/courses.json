@@ -1,0 +1,363 @@
+[
+    {
+      "id": 1,
+      "title": "Vue.js for Beginners",
+      "description": "Start learning Vue.js from scratch with this comprehensive beginner's course.",
+      "instructor": "John Doe",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "John Doe is a senior web developer with over 10 years of experience in building modern web applications. He specializes in Vue.js and modern JavaScript frameworks.",
+      "learningPoints": [
+        "Understand the basics of Vue.js",
+        "Build dynamic web applications",
+        "Master component-based architecture"
+      ],
+      "level": "Beginner",
+      "expectations": "By the end of this course, you will have a solid understanding of Vue.js and be able to build your own web applications.",
+      "category": "Web Development",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to Vue.js",
+          "description": "Learn the fundamentals of Vue.js and how it works.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Building Your First Vue Component",
+          "description": "A step-by-step guide to building your first Vue component.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Advanced Vue.js",
+      "description": "Take your Vue.js skills to the next level with advanced techniques.",
+      "instructor": "Jane Smith",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Jane Smith is an expert in frontend development with a focus on Vue.js and modern JavaScript. She has over 8 years of experience in the industry.",
+      "learningPoints": [
+        "Advanced component techniques",
+        "State management with Vuex",
+        "Optimizing Vue.js applications"
+      ],
+      "level": "Advanced",
+      "expectations": "By the end of this course, you will be able to create highly optimized and scalable Vue.js applications.",
+      "category": "Web Development",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Deep Dive into Vue Components",
+          "description": "Learn about advanced component techniques.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Managing State with Vuex",
+          "description": "Master state management in Vue.js using Vuex.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Guitar for Beginners",
+      "description": "Learn to play the guitar from scratch with this comprehensive beginner's course.",
+      "instructor": "Mike Johnson",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Mike Johnson is a professional guitarist with over 15 years of experience in teaching and performing. He has a passion for helping beginners start their musical journey.",
+      "learningPoints": [
+        "Basic chords and strumming",
+        "Reading guitar tabs",
+        "Playing simple songs"
+      ],
+      "level": "Beginner",
+      "expectations": "By the end of this course, you will be able to play basic songs on the guitar and understand fundamental music theory.",
+      "category": "Music",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to Guitar",
+          "description": "Get started with the basics of playing the guitar.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Basic Chords",
+          "description": "Learn the basic chords used in most songs.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Advanced Piano Techniques",
+      "description": "Take your piano skills to the next level with advanced techniques.",
+      "instructor": "Sarah Lee",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Sarah Lee is a classically trained pianist with over 20 years of experience in teaching advanced piano techniques. She has performed worldwide and specializes in improvisation and complex compositions.",
+      "learningPoints": [
+        "Advanced scales and arpeggios",
+        "Improvisation techniques",
+        "Playing complex pieces"
+      ],
+      "level": "Advanced",
+      "expectations": "By the end of this course, you will be able to perform complex piano compositions and improvise with confidence.",
+      "category": "Music",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Mastering Scales",
+          "description": "Learn advanced scales and how to practice them effectively.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Introduction to Improvisation",
+          "description": "Start improvising with confidence using these techniques.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Fitness Training for Beginners",
+      "description": "Get started with a beginner-friendly fitness routine.",
+      "instructor": "Alex Turner",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Alex Turner is a certified fitness trainer with over 10 years of experience in helping beginners achieve their fitness goals. He specializes in bodyweight exercises and creating sustainable workout plans.",
+      "learningPoints": [
+        "Basic exercises and form",
+        "Creating a workout plan",
+        "Staying motivated"
+      ],
+      "level": "Beginner",
+      "expectations": "By the end of this course, you will have the knowledge to start and maintain a basic fitness routine.",
+      "category": "Fitness",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to Fitness",
+          "description": "Learn the basics of starting a fitness routine.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Bodyweight Exercises",
+          "description": "Master basic bodyweight exercises to build strength.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Introduction to Hardware and Electronics",
+      "description": "Learn the basics of computer hardware and electronics.",
+      "instructor": "Chris Evans",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Chris Evans is an electronics engineer with over 12 years of experience in the industry. He has a deep understanding of hardware components and is passionate about teaching the next generation of engineers.",
+      "learningPoints": [
+        "Understanding hardware components",
+        "Building a simple circuit",
+        "Basics of microcontrollers"
+      ],
+      "level": "Beginner",
+      "expectations": "By the end of this course, you will have a solid understanding of basic electronics and hardware components, and be able to build simple circuits.",
+      "category": "Electronics",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Hardware Components Overview",
+          "description": "Learn about the different components that make up a computer.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Introduction to Microcontrollers",
+          "description": "Learn the basics of microcontrollers and how to program them.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Basics of Graphic Design",
+      "description": "Learn the essentials of graphic design.",
+      "instructor": "Emily Clark",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Emily Clark is a graphic designer with over 10 years of experience in branding and visual design. She is passionate about teaching design principles to beginners.",
+      "learningPoints": [
+        "Basic design principles",
+        "Color theory",
+        "Typography and layout"
+      ],
+      "level": "Beginner",
+      "expectations": "By the end of this course, you will have a solid understanding of graphic design principles and be able to create your own designs.",
+      "category": "Design",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to Graphic Design",
+          "description": "Get started with the basics of graphic design.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Understanding Color Theory",
+          "description": "Learn how to use color effectively in your designs.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Advanced Photoshop Techniques",
+      "description": "Master Photoshop with advanced techniques.",
+      "instructor": "David White",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "David White is a professional photographer and Photoshop expert with over 15 years of experience. He specializes in photo manipulation and retouching.",
+      "learningPoints": [
+        "Advanced photo manipulation",
+        "Retouching techniques",
+        "Working with layers and masks"
+      ],
+      "level": "Advanced",
+      "expectations": "By the end of this course, you will be able to use advanced Photoshop techniques to create stunning images.",
+      "category": "Design",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to Advanced Photoshop",
+          "description": "Learn the advanced features of Photoshop.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Advanced Retouching Techniques",
+          "description": "Master retouching techniques for professional results.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "UI/UX Design Fundamentals",
+      "description": "Understand the fundamentals of UI/UX design.",
+      "instructor": "Anna Green",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Anna Green is a UI/UX designer with over 8 years of experience in creating user-friendly interfaces and improving user experiences.",
+      "learningPoints": [
+        "Understanding user needs",
+        "Designing user interfaces",
+        "Prototyping and testing"
+      ],
+      "level": "Intermediate",
+      "expectations": "By the end of this course, you will be able to design user-friendly interfaces and understand the principles of UX design.",
+      "category": "Design",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to UI/UX Design",
+          "description": "Get started with the basics of UI/UX design.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Prototyping and Testing",
+          "description": "Learn how to create and test prototypes.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yoga for Beginners",
+      "description": "Start your yoga journey with basic exercises.",
+      "instructor": "Laura Brown",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Laura Brown is a certified yoga instructor with over 12 years of experience. She focuses on teaching beginners the fundamentals of yoga and mindfulness.",
+      "learningPoints": [
+        "Basic yoga poses",
+        "Breathing techniques",
+        "Mindfulness and relaxation"
+      ],
+      "level": "Beginner",
+      "expectations": "By the end of this course, you will be able to perform basic yoga poses and understand the importance of mindfulness.",
+      "category": "Fitness",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to Yoga",
+          "description": "Learn the basics of yoga and how to get started.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Basic Yoga Poses",
+          "description": "Practice basic yoga poses for beginners.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Bodybuilding Basics",
+      "description": "Learn the basics of bodybuilding and strength training.",
+      "instructor": "Mark Johnson",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "Mark Johnson is a professional bodybuilder with over 10 years of experience in strength training and nutrition. He is passionate about helping others achieve their fitness goals.",
+      "learningPoints": [
+        "Strength training fundamentals",
+        "Nutrition and diet for bodybuilding",
+        "Building muscle mass"
+      ],
+      "level": "Beginner",
+      "expectations": "By the end of this course, you will understand the basics of bodybuilding and how to start your strength training journey.",
+      "category": "Fitness",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to Bodybuilding",
+          "description": "Learn the fundamentals of bodybuilding.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Strength Training Basics",
+          "description": "Understand the basics of strength training and how to build muscle.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Running Techniques",
+      "description": "Improve your running techniques and endurance.",
+      "instructor": "James White",
+      "instructorImageUrl": "https://via.placeholder.com/150",
+      "instructorBio": "James White is a professional running coach with over 15 years of experience. He specializes in helping athletes improve their running form and endurance.",
+      "learningPoints": [
+        "Proper running form",
+        "Building endurance",
+        "Injury prevention"
+      ],
+      "level": "Intermediate",
+      "expectations": "By the end of this course, you will improve your running techniques and endurance.",
+      "category": "Fitness",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to Running Techniques",
+          "description": "Learn the basics of running techniques and how to improve your form.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        },
+        {
+          "id": 2,
+          "title": "Endurance Building",
+          "description": "Understand how to build endurance and prevent injuries.",
+          "videoUrl": "/videos/videoplaceholder.mp4"
+        }
+      ]
+    }
+  ]
+  

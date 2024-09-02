@@ -1,0 +1,26 @@
+
+Projenin başlangıcında, "Build an LMS platform" gibi tutoriallardan faydalanarak ihtiyacım olan tüm bileşenlere hakim oldum. Bu sayede internette araştırma yaparak fazla vakit kaybetmedim ve önceki Vue.js tecrübelerimle gerekli kurulumları yapıp ve komponentleri yükleyip hızlıca projenin temellerini attım.
+
+İlk olarak, kursların yer aldığı bir ana sayfa oluşturdum. Ardından, kursların detaylarının görüntülenebileceği bir course view tasarladım. Bu sayfayı tüm kursları listeleyen bir sayfa olarak atadım ve ayrı bir ana sayfa ve navigation bar ekledim ve Navbarda kursları kategorilere ayırarak görüntüledim. 
+
+BEğenme ve bookmark ve yorum sistemi , profil sistemiylede alakalı olduğu için doğrudan ve dolaylı olarak yine pek çok problemle karşılaştım. fakat şu an normal bir websitesinde gibi doğru çalışıyor er hesap ayrıca yorum beğenme bookmark atabiliyor , ve sayacı da var .
+ayrıca yoruma yorum ve tüm bunlari geri çekme silme özelliği de var
+
+
+Video ekleme ve oynatma ile profil işlemleri kısımlarında zamanımın çoğunu harcadım ve bu süreçte oldukça oyalandım, ancak sonuç olarak bu sorunları çözdüm. Ayrıca çalışan bir arama çubuğu ekledim ve yanında Canva’dan basitçe oluşturduğum özel bir logo kullandım.
+
+Karşılaştığım hataları ve enegelleri ve eksiklikleri çözmek için yararlandığım internet linkleri aşağıdadır:
+
+
+https://stackoverflow.com/questions/34633323/typeerror-this-set-is-not-a-function
+https://www.reddit.com/r/react/comments/169bceu/why_do_i_keep_getting_uncaught_runtime_errors_in/
+https://stackoverflow.com/questions/55706680/logout-button-doesnt-clear-local-storage
+https://stackoverflow.com/questions/41425889/vue-js-how-to-use-localstorage-with-vue-js
+https://www.reddit.com/r/vuejs/comments/1at9zyd/add_bootstrap_to_vue_project/
+https://stackoverflow.com/questions/67323027/vue-router-params-not-updating-in-page
+https://stackoverflow.com/questions/70150121/unable-to-filter-by-category-in-a-forum
+https://stackoverflow.com/questions/60213857/filter-a-list-of-posts-accepting-lowercase-or-uppercase-strings
+https://stackoverflow.com/questions/62087808/video-not-loading-with-vuejs
+
+Ayrıca yine tutorial videoalrın yanında vuejsin kendi sitesi , internette örnek sitelerden de yararlandım 
+çeşitli hata bulma ve temiz kod için chatgpt den de yararlandım
