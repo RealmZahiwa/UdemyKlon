@@ -10,7 +10,8 @@ import ContactPage from '../views/ContactPage.vue';
 import MyProfilePage from '../views/MyProfilePage.vue';
 import SettingsPage from '../views/SettingsPage.vue';
 import AdminPage from '../views/AdminPage.vue';
-import UploadVideo from '../views/UploadVideo.vue'; 
+import UploadVideoPage from '../views/UploadVideo.vue';
+import RatingHubPage from '../views/RatingHubPage.vue'; // Import new page
 
 const routes = [
   {
@@ -29,7 +30,12 @@ const routes = [
     component: CourseDetailPage,
   },
   {
-    path: '/profile',
+    path: '/profile-page',
+    name: 'Profile',
+    component: MyProfilePage,
+  },
+  {
+    path: '/user-profile',
     name: 'UserProfile',
     component: UserProfilePage,
   },
@@ -71,7 +77,12 @@ const routes = [
   {
     path: '/upload-video',
     name: 'UploadVideo',
-    component: UploadVideo,
+    component: UploadVideoPage,
+  },
+  {
+    path: '/rating-hub',
+    name: 'RatingHub',
+    component: RatingHubPage, // Add new route
   },
 ];
 

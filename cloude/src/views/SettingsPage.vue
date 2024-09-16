@@ -1,21 +1,39 @@
 <template>
   <div class="container mt-5">
     <h2>Settings</h2>
-    <form @submit.prevent="updateProfile">
-      <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" v-model="user.name" required>
+    
+    <!-- Tema Ayarları -->
+    <div class="mb-4">
+      <h5>Theme Settings</h5>
+      <select v-model="settings.theme" class="form-select">
+        <option value="light">Light Mode</option>
+        <option value="dark">Dark Mode</option>
+        <option value="system">System Default</option>
+      </select>
+    </div>
+    
+    <!-- Dil Ayarları -->
+    <div class="mb-4">
+      <h5>Language Settings</h5>
+      <select v-model="settings.language" class="form-select">
+        <option value="en">English</option>
+        <option value="tr">Turkish</option>
+        <option value="es">Spanish</option>
+      </select>
+    </div>
+    
+    <!-- Bildirim Ayarları -->
+    <div class="mb-4">
+      <h5>Notification Settings</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" v-model="settings.notifications" id="notifications">
+        <label class="form-check-label" for="notifications">
+          Enable email notifications
+        </label>
       </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" v-model="user.email" required>
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" v-model="user.password">
-      </div>
-      <button type="submit" class="btn btn-success">Save Changes</button>
-    </form>
+    </div>
+
+    <button @click="saveSettings" class="btn btn-success">Save Settings</button>
     <p v-if="successMessage" class="text-success mt-3">{{ successMessage }}</p>
     <p v-if="errorMessage" class="text-danger mt-3">{{ errorMessage }}</p>
   </div>
@@ -27,31 +45,28 @@ import { saveToLocalStorage, getFromLocalStorage } from '@/utils/storage';
 export default {
   data() {
     return {
-      user: {
-        id: null,
-        name: "",
-        email: "",
-        password: "",
+      settings: {
+        theme: 'light', 
+        language: 'en', 
+        notifications: true, 
       },
       successMessage: null,
       errorMessage: null,
     };
   },
   created() {
-    const storedUser = getFromLocalStorage('loggedInUser');
-    if (storedUser) {
-      this.user = storedUser;
-    } else {
-      this.$router.push('/login-page');
+    const storedSettings = getFromLocalStorage('appSettings');
+    if (storedSettings) {
+      this.settings = storedSettings;
     }
   },
   methods: {
-    updateProfile() {
+    saveSettings() {
       try {
-        saveToLocalStorage('loggedInUser', this.user);
-        this.successMessage = "Profile updated successfully!";
+        saveToLocalStorage('appSettings', this.settings);
+        this.successMessage = "Settings updated successfully!";
       } catch (error) {
-        this.errorMessage = "An error occurred while updating the profile.";
+        this.errorMessage = "An error occurred while saving the settings.";
       }
     }
   }
@@ -68,14 +83,15 @@ h2 {
   margin-bottom: 20px;
 }
 
+.form-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 .btn-success {
   background-color: #28a745;
   border-color: #28a745;
-}
-
-.btn-success:hover {
-  background-color: #218838;
-  border-color: #1e7e34;
 }
 
 .text-success {

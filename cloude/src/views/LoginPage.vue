@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { getUsers } from '@/utils/api';
 import { saveToLocalStorage } from '@/utils/storage';
 
 export default {
@@ -29,18 +30,23 @@ export default {
   },
   methods: {
     async login() {
-      const response = await fetch("/users.json");
-      const users = await response.json();
+      try {
+        const response = await getUsers(); 
+        const users = response.data; 
 
-      const user = users.find(
-        (u) => u.email === this.email && u.password === this.password
-      );
+        const user = users.find(
+          (u) => u.email === this.email && u.password === this.password
+        );
 
-      if (user) {
-        saveToLocalStorage('loggedInUser', user);
-        this.$router.push("/my-profile");
-      } else {
-        this.errorMessage = "Invalid email or password";
+        if (user) {
+          saveToLocalStorage('loggedInUser', user);
+          this.$router.push("/my-profile");
+        } else {
+          this.errorMessage = "Invalid email or password";
+        }
+      } catch (error) {
+        console.error('Error fetching users:', error);
+        this.errorMessage = "An error occurred. Please try again.";
       }
     }
   }

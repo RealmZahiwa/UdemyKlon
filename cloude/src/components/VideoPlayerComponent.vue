@@ -56,7 +56,7 @@
         this.currentTime = this.$refs.video.currentTime;
       },
       bookmarkCurrentTime() {
-        // This is where you could save the bookmark to the store
+        
         alert(`Bookmark added at ${this.currentTimeFormatted}`);
       },
       onVideoEnded() {

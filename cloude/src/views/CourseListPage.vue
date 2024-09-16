@@ -1,15 +1,20 @@
 <template>
   <div class="container mt-5">
-    <h2 class="text-center mb-4">All Courses</h2>
+    <!-- Yükleme Ekranı -->
+    <loading v-model:active="isLoading" :can-cancel="false" :is-full-page="true" />
 
-    <div class="row">
-      <div class="col-md-4 mb-4" v-for="course in filteredCourses" :key="course.id">
-        <div class="card h-100">
-          <img :src="course.imageUrl" class="card-img-top" alt="course image">
-          <div class="card-body">
-            <h5 class="card-title">{{ course.title }}</h5>
-            <p class="card-text">{{ course.description }}</p>
-            <router-link :to="'/courses/' + course.id" class="btn btn-primary">View Course</router-link>
+    <!-- Ana İçerik -->
+    <div v-if="!isLoading">
+      <h2 class="text-center mb-4">All Courses</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" v-for="course in filteredCourses" :key="course.id">
+          <div class="card h-100">
+            <img :src="course.imageUrl" class="card-img-top" alt="course image" @error="handleImageError">
+            <div class="card-body">
+              <h5 class="card-title">{{ course.title }}</h5>
+              <p class="card-text">{{ course.description }}</p>
+              <router-link :to="'/courses/' + course.id" class="btn btn-primary">View Course</router-link>
+            </div>
           </div>
         </div>
       </div>
@@ -18,28 +23,32 @@
 </template>
 
 <script>
+import Loading from 'vue3-loading-overlay';
+import 'vue3-loading-overlay/dist/vue3-loading-overlay.css';
+
 export default {
   name: 'CourseListPage',
+  components: {
+    Loading
+  },
   data() {
     return {
       courses: [
-        { id: 1, title: 'Vue.js for Beginners', description: 'Learn Vue.js from scratch.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Web Development' },
-        { id: 2, title: 'Advanced Vue.js', description: 'Advanced techniques in Vue.js.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Web Development' },
-        { id: 3, title: 'Full-Stack JavaScript', description: 'Master full-stack development.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Web Development' },
-        { id: 4, title: 'Guitar for Beginners', description: 'Learn to play the guitar from scratch.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Music' },
-        { id: 5, title: 'Piano Mastery', description: 'Master the piano with our advanced course.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Music' },
-        { id: 6, title: 'Music Theory Essentials', description: 'Understand the fundamentals of music theory.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Music' },
-        { id: 7, title: 'Fitness Training for Beginners', description: 'Start your fitness journey with basic exercises.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Fitness' },
-        { id: 8, title: 'Advanced Piano Techniques', description: 'Take your piano skills to the next level.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Music' },
-        { id: 9, title: 'Introduction to Hardware and Electronics', description: 'Learn the basics of hardware and electronics.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Electronics' },
-        { id: 10, title: 'Running Techniques', description: 'Improve your running techniques and endurance.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Fitness' },
-        { id: 11, title: 'Basics of Graphic Design', description: 'Learn the essentials of graphic design.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Design' },
-        { id: 12, title: 'Advanced Photoshop Techniques', description: 'Master Photoshop with advanced techniques.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Design' },
-        { id: 13, title: 'UI/UX Design Fundamentals', description: 'Understand the fundamentals of UI/UX design.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Design' },
-        { id: 14, title: 'Yoga for Beginners', description: 'Start your yoga journey with basic exercises.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Fitness' },
-        { id: 15, title: 'Bodybuilding Basics', description: 'Learn the basics of bodybuilding and strength training.', imageUrl: 'https://via.placeholder.com/400x200', category: 'Fitness' }
-      ],
-      filteredCourses: []  
+        { id: 1, title: 'Vue.js for Beginners', description: 'Learn Vue.js from scratch.', imageUrl: '/images/vuejsforbeginners.jpg', category: 'Web Development' },
+        { id: 2, title: 'Advanced Vue.js', description: 'Advanced techniques in Vue.js.', imageUrl: '/images/advancedvuejs.jpg', category: 'Web Development' },
+        { id: 3, title: 'Full-Stack JavaScript', description: 'Master full-stack development.', imageUrl: '/images/fullstackjavascript.jpg', category: 'Web Development' },
+        { id: 4, title: 'Guitar for Beginners', description: 'Learn to play the guitar from scratch.', imageUrl: '/images/guitarforbeginners.jpg', category: 'Music' },
+        { id: 5, title: 'Piano Mastery', description: 'Master the piano with our advanced course.', imageUrl: '/images/pianomastery.jpg', category: 'Music' },
+        { id: 6, title: 'Music Theory Essentials', description: 'Understand the fundamentals of music theory.', imageUrl: '/images/musictheoryessentials.jpg', category: 'Music' },
+        { id: 7, title: 'Fitness Training for Beginners', description: 'Start your fitness journey with basic exercises.', imageUrl: '/images/fitnesstrainingforbeginners.jpg', category: 'Fitness' },
+        { id: 8, title: 'Advanced Piano Techniques', description: 'Take your piano skills to the next level.', imageUrl: '/images/advancedpianotechniques.jpg', category: 'Music' },
+        { id: 9, title: 'Introduction to Hardware and Electronics', description: 'Learn the basics of hardware and electronics.', imageUrl: '/images/hardwareandelectronics.jpg', category: 'Electronics' },
+        { id: 10, title: 'Running Techniques', description: 'Improve your running techniques and endurance.', imageUrl: '/images/runningtechniques.jpg', category: 'Fitness' },
+        { id: 11, title: 'Basics of Graphic Design', description: 'Learn the essentials of graphic design.', imageUrl: '/images/graphicdesignbasics.jpg', category: 'Design' },
+        { id: 12, title: 'Advanced Photoshop Techniques', description: 'Master Photoshop with advanced techniques.', imageUrl: '/images/advancedphotoshoptechniques.jpg', category: 'Design' },
+       ],
+      filteredCourses: [],
+      isLoading: true // Yükleme durumu
     };
   },
   methods: {
@@ -51,6 +60,10 @@ export default {
         const matchesCategory = category ? course.category === category : true;
         return matchesSearch && matchesCategory;
       });
+    },
+    handleImageError(event) {
+      console.log('Image failed to load:', event.target.src); 
+      event.target.src = '/images/default.jpg'; 
     }
   },
   watch: {
@@ -63,10 +76,20 @@ export default {
       this.filterCourses(query, newCategory);
     }
   },
-  created() {
+  async created() {
     const query = this.$route.query.q || '';
     const category = this.$route.query.category || '';
+    
+    // Veriler yüklenmeden önce loading başlasın
+    this.isLoading = true;
+
+    // Verileri yükleyelim (yapay bir gecikme simülasyonu ekleyebiliriz)
+    await new Promise(resolve => setTimeout(resolve, 1000)); // 1 saniye bekleme
+
     this.filterCourses(query, category);
+
+    // Veriler yüklendikten sonra loading kapatılsın
+    this.isLoading = false;
   }
 };
 </script>

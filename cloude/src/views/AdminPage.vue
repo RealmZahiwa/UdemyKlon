@@ -49,9 +49,9 @@
         const newVideo = { ...this.newVideo, id: Date.now() };
         this.videos.push(newVideo);
   
-        // JSON dosyasını güncelleyin
+        
         await fetch("/path/to/videos.json", {
-          method: "POST", // Gerçekte bir backend ile bu şekilde güncellenebilir.
+          method: "POST", 
           headers: {
             "Content-Type": "application/json",
           },
@@ -61,9 +61,9 @@
       async deleteVideo(videoId) {
         this.videos = this.videos.filter((video) => video.id !== videoId);
   
-        // JSON dosyasını güncelleyin
+        
         await fetch("/path/to/videos.json", {
-          method: "POST", // Gerçekte bir backend ile bu şekilde güncellenebilir.
+          method: "POST", 
           headers: {
             "Content-Type": "application/json",
           },

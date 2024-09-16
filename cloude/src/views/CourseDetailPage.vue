@@ -9,7 +9,7 @@
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
-            <img :src="course.instructorImageUrl" class="img-fluid rounded-start" alt="Instructor Image">
+            <img :src="`/images/${course.instructorImageUrl}`" class="img-fluid rounded-start" alt="Instructor Image">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -113,7 +113,7 @@ export default {
     };
   },
   async created() {
-    const response = await fetch("/courses.json");
+    const response = await fetch("https://66e7235817055714e58b908b.mockapi.io/courses");
     const courses = await response.json();
     const courseId = this.$route.params.id;
 

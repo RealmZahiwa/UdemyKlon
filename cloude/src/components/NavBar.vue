@@ -47,11 +47,15 @@
     </div>
   </nav>
 
+  
   <div class="bg-dark py-2">
     <div class="container">
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <router-link class="nav-link text-white" to="/courses">All Courses</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/rating-hub">Rating Hub</router-link> <!-- New link added -->
         </li>
         <li class="nav-item dropdown">
           <a
@@ -103,11 +107,8 @@ export default {
       }
     },
     logout() {
-      
       localStorage.removeItem('loggedInUser');
-     
       this.isLoggedIn = false;
-      
       this.$router.push('/login-page');
     },
     checkLoginStatus() {
@@ -131,7 +132,6 @@ export default {
   width: 40px;
   height: 40px;
 }
-
 
 .search-bar {
   flex: 1;
@@ -164,16 +164,18 @@ export default {
   color: white;
 }
 
-
 .bg-dark {
   background-color: #343a40 !important;
 }
+
 .nav {
   font-size: 1rem;
 }
+
 .nav-link {
   color: #ffffff;
 }
+
 .nav-link:hover {
   color: #adb5bd;
 }
